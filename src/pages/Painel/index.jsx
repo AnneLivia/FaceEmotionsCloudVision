@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Col, Row, Form, Button, InputGroup, Image } from 'react-bootstrap';
 import CustomCard from '../../components/Card';
+import CustomSpinner from '../../components/Spinner';
 import defaultImage from '../../assets/default_image.jpg';
 import axios from '../../service/api.js';
 import { toast } from 'react-toastify';
@@ -16,6 +17,8 @@ const Painel = () => {
   };
 
   const [image, setImage] = useState(defaultImage);
+  const [loading, setLoading] = useState(false);
+
   const [emotions, setEmotions] = useState({
     joyLikelihood: 'VERY_UNLIKELY',
     sorrowLikelihood: 'VERY_UNLIKELY',
@@ -25,6 +28,7 @@ const Painel = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true);
     if (event.target.image.files[0]) {
       const formData = new FormData();
       formData.append('image', event.target.image.files[0]);
@@ -54,6 +58,8 @@ const Painel = () => {
         }
         console.error(err);
         toast.error(err.message);
+      } finally {
+        setLoading(false);
       }
     }
   };
@@ -104,7 +110,13 @@ const Painel = () => {
           </Form>
         </Col>
       </Row>
-
+      <Row className='jutify-content-center mt-1 mb-4'>
+        <Col className='align-self-center'>
+          <div className='text-center'>
+            <CustomSpinner loading={loading} color='#ff6100' />
+          </div>
+        </Col>
+      </Row>
       <Row className='justify-content-center'>
         <Col md={5} className='mb-2 text-center'>
           <BarEmotion likelihood={emotions.joyLikelihood} label='Joy' />

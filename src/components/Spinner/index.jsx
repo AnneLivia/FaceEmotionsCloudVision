@@ -1,7 +1,7 @@
-import { BeatLoader } from 'react-spinners';
+import { RiseLoader } from 'react-spinners';
 
 const CustomSpinner = ({ color, loading }) => (
-  <BeatLoader
+  <RiseLoader
     color={color}
     size={10}
     loading
