@@ -1,5 +1,5 @@
 # Face Emotions Detections using Cloud Vision API
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/AnneLivia/ObjectDetectionCloudVision/blob/main/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/AnneLivia/FaceEmotionsCloudVision/blob/main/LICENSE)
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat&logo=Bootstrap&logoColor=white)
