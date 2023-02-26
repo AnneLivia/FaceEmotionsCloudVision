@@ -10,4 +10,4 @@ Using GCP Cloud Vision API, React.js and OpenCV to identify face emotions on ima
 All the processing related to the Cloud Vision API is being done using a backend API developed using Node.js With Express. The backend repository can be accessed through [this link](https://github.com/AnneLivia/CloudVisionAPI-Backend).
 
 ## Interface
-<img src="https://user-images.githubusercontent.com/31932673/221425875-2e2a00af-bc15-47e2-9627-a117ec25e0ed.PNG" width="60%"/>
+![Example](https://user-images.githubusercontent.com/31932673/221428268-65128ab1-15dc-4ecc-9d44-0195a5382286.PNG)
